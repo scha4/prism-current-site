@@ -34,7 +34,7 @@ export default function NavbarMain() {
 
       <Typography as="li" className="p-1 font-bold  py-2 ">
         <a href="/trainers" className="flex items-center font-display">
-          Trainers SEXY
+          Trainers
         </a>
       </Typography>
       <Typography as="li" className="p-1 font-bold py-2  ">
