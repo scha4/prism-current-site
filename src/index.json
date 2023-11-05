@@ -1,0 +1,40 @@
+{
+  "staff": {
+    "title": "staff",
+    "staff": [
+      {
+        "id": "1",
+        "name": "Coach Eric",
+
+        "url": "<a href='/trainers'>Learn More </a>",
+        "image": "/CE1.jpg"
+      },
+      {
+        "id": "2",
+        "name": "Coach Dan",
+
+        "description": "A website for a korean OEM service company called Mandeulja.  This website was created using React, Tailwind CSS, and EmailJs. ",
+        "url": "<a href='/trainers'>Learn More </a>",
+        "image": "/CD1.jpg"
+      },
+      {
+        "id": "3",
+        "name": "Coach Wonjun",
+
+        "description": "A website for a korean OEM service company called Mandeulja.  This website was created using React, Tailwind CSS, and EmailJs. ",
+        "url": "<a href='/trainers'>Learn More </a>",
+        "image": "./wonjunpic2.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "This is where you can describe about your contact. The more you describe about your contact, the more chances you have!",
+    "formId": "your-form-id"
+  },
+  "footer": {
+    "linkedin": "https://linkedin.com/in/samcha4",
+    "twitter": "https://twitter.com/samchatech",
+    "github": "https://github.com/scha4"
+  }
+}
