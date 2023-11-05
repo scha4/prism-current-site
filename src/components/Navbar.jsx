@@ -34,7 +34,7 @@ export default function NavbarMain() {
 
       <Typography as="li" className="p-1 font-bold  py-2 ">
         <a href="/trainers" className="flex items-center font-display">
-          Trainers
+          Trainers SEXY
         </a>
       </Typography>
       <Typography as="li" className="p-1 font-bold py-2  ">
@@ -54,10 +54,14 @@ export default function NavbarMain() {
 
   return (
     <Navbar
-      style={{ backgroundColor: "#000",'borderBottom': '1px solid white !important', 'border':'none' }}
+      style={{
+        backgroundColor: "#000",
+        borderBottom: "1px solid white !important",
+        border: "none",
+      }}
       className="inset-0 z-10  mx-auto max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 bg-black"
     >
-      <div className="container mx-auto flex items-center justify-between z-10 ">
+      <div className="container mx-auto flex items-center justify-between z-10  ">
         <a href="/">
           <img src="./prismWord.png" className="w-24 h-18  " />
         </a>
