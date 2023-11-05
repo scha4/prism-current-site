@@ -56,8 +56,10 @@ export default function NavbarMain() {
     <Navbar
       style={{
         backgroundColor: "#000",
-        borderBottom: "1px solid white !important",
-        border: "none",
+        borderBottom: "1px solid white",
+        borderRight:'none',
+        borderLeft:'none',
+        borderTop:'none',
       }}
       className="inset-0 z-10  mx-auto max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 bg-black"
     >

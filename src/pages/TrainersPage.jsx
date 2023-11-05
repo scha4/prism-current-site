@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarMain from "../components/Navbar";
+import NavbarMain from "../components/NavbarMain";
 import TPhero from "../components/TPhero";
 import EricHero from "../components/EricHero";
 import DanHero from "../components/DanHero";

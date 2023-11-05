@@ -1,6 +1,6 @@
 import React from "react";
 import VideoBack from "../components/VideoBack";
-import NavbarMain from "../components/Navbar";
+import NavbarMain from "../components/NavbarMain";
 import Hero from "../components/Hero";
 import Hero2 from "../components/Hero2";
 import Footer from "../components/Footer";

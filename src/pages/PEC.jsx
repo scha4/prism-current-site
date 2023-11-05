@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarMain from "../components/Navbar";
+import NavbarMain from "../components/NavbarMain";
 import Footer from "../components/Footer";
 function PEC() {
   return (
