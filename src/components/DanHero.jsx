@@ -1,5 +1,10 @@
 import React from "react";
-import { AiOutlineInstagram, AiFillInstagram } from "react-icons/ai";
+import {
+  AiOutlineInstagram,
+  AiFillInstagram,
+  AiFillLinkedin,
+} from "react-icons/ai";
+import { SiIndeed } from "react-icons/si";
 
 function DanHero() {
   return (
@@ -35,10 +40,24 @@ function DanHero() {
               <p>BOTHEL HIGH SCHOOL VARSITY</p>
             </div>
             <div className="flex flex-col place-items-center">
-              <h4 className="font-bold mt-3">SOCIAL</h4>
-              <a target="_blank" href="https://www.instagram.com/dj_lee40/">
-                <AiFillInstagram size={60} className="hover:fill-blue-500" />
-              </a>
+              <h4 className="font-bold mt-3 ">SOCIAL</h4>
+              <div className="flex">
+                <a target="_blank" href="https://www.instagram.com/dj_lee40/">
+                  <AiFillInstagram size={60} className="hover:fill-blue-500" />{" "}
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/daniel-sandrin-365a571ab"
+                >
+                  <AiFillLinkedin size={60} className="hover:fill-blue-500" />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://profile.indeed.com/p/daniels-882rhp7"
+                >
+                  <SiIndeed size={60} className="hover:fill-blue-500" />
+                </a>
+              </div>
             </div>
           </h1>
         </div>
