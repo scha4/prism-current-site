@@ -4,6 +4,7 @@ import {
   AiFillInstagram,
   AiFillYoutube,
 } from "react-icons/ai";
+import { FaTiktok } from "react-icons/fa";
 function Wonjun() {
   return (
     <>
@@ -43,6 +44,12 @@ function Wonjun() {
                   href="https://www.youtube.com/@ThisIsHowWeHoop"
                 >
                   <AiFillYoutube size={60} className="hover:fill-blue-500" />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.tiktok.com/@im_wonjun?lang=en"
+                >
+                  <FaTiktok size={40} className="hover:fill-blue-500 mt-2 " />
                 </a>
               </div>
             </div>

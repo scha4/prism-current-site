@@ -43,19 +43,19 @@ function DanHero() {
               <h4 className="font-bold mt-3 ">SOCIAL</h4>
               <div className="flex">
                 <a target="_blank" href="https://www.instagram.com/dj_lee40/">
-                  <AiFillInstagram size={60} className="hover:fill-blue-500" />{" "}
+                  <AiFillInstagram size={50} className="hover:fill-blue-500" />{" "}
                 </a>
                 <a
                   target="_blank"
                   href="https://www.linkedin.com/in/daniel-sandrin-365a571ab"
                 >
-                  <AiFillLinkedin size={60} className="hover:fill-blue-500" />
+                  <AiFillLinkedin size={50} className="hover:fill-blue-500" />
                 </a>
                 <a
                   target="_blank"
                   href="https://profile.indeed.com/p/daniels-882rhp7"
                 >
-                  <SiIndeed size={60} className="hover:fill-blue-500" />
+                  <SiIndeed size={45} className="hover:fill-blue-500" />
                 </a>
               </div>
             </div>

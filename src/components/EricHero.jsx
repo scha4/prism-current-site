@@ -34,7 +34,7 @@ function EricHero() {
               <div className="flex flex-col place-items-center">
                 <h4 className="font-bold mt-3">SOCIAL</h4>
                 <a target="_blank" href="https://www.instagram.com/sj_lee14/">
-                  <AiFillInstagram size={60} className="hover:fill-blue-500" />
+                  <AiFillInstagram size={50} className="hover:fill-blue-500" />
                 </a>
               </div>
             </div>
@@ -64,7 +64,7 @@ function EricHero() {
           <div className="flex flex-col place-items-center">
             <h4 className="font-bold mt-3">SOCIAL</h4>
             <a href="https://www.instagram.com/sj_lee14/">
-              <AiFillInstagram size={60} className="hover:fill-blue-500" />
+              <AiFillInstagram size={50} className="hover:fill-blue-500" />
             </a>
           </div>
         </div>
