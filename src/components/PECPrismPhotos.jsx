@@ -14,8 +14,9 @@ function PECPrismPhotos() {
           <img src="PECCAMPIMAGES/PEC4-min.JPG" />
           <img src="PECCAMPIMAGES/PEC5-min.JPG" />
           <img src="PECCAMPIMAGES/PEC6-min.JPG" />
-          <img src="PECCAMPIMAGES/PEC7-min.JPG" />
+
           <img src="PECCAMPIMAGES/PEC8-min.JPG" />
+          <img src="PECCAMPIMAGES/PEC7-min.JPG" />
           <img src="PECCAMPIMAGES/PEC9-min.JPG" />
         </div>
       </div>
