@@ -52,7 +52,7 @@ export default function Footer() {
         </Typography>
         {/* icons */}
         <div className="flex gap-6 text-black lg:justify-end justify-center items-center mt-3 ">
-          <a target="_blank" href="https://www.instagram.com/im_wonjun/">
+          <a target="_blank" href="https://www.instagram.com/prism_hoops/">
             <AiFillInstagram
               size={50}
               className="hover:fill-gray-400  text-white"
