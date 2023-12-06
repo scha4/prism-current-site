@@ -5,14 +5,23 @@ import EricHero from "../components/EricHero";
 import DanHero from "../components/DanHero";
 import Wonjun from "../components/Wonjun";
 import Footer from "../components/Footer";
+
 function TrainersPage() {
   return (
     <>
       <NavbarMain />
       <TPhero />
-      <EricHero id="eric" />
-      <DanHero />
-      <Wonjun />
+
+      <div id="eric">
+        <EricHero />
+      </div>
+      <div id="dan">
+        <DanHero />
+      </div>
+      <div id="wonjun">
+        <Wonjun />
+      </div>
+
       <Footer />
     </>
   );
