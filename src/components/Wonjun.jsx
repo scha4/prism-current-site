@@ -25,8 +25,8 @@ function Wonjun() {
             </div>
             <h4 className="font-bold mt-3">COACHING</h4>
             <div className="text-lg ">
-              <p>LAKE WASHINGTON HS VARSITY BOYS[2014]</p>
-              <p>SFS HS VARSITY BOYS[2018]</p>
+              <p>LAKE WASHINGTON HS VARSITY BOYS [2014]</p>
+              <p>SFS HS VARSITY BOYS [2018]</p>
               <p>PEC SPORTS ACADEMY SUWON</p>
               <p>PRISM ACADEMY</p>
             </div>
@@ -65,8 +65,8 @@ function Wonjun() {
           <p>JAPAN EXE LEAGUE PLAYER [2019]</p>
           <h4 className="font-bold mt-3">COACHING</h4>
           <div className="text-lg text-center">
-            <p>LAKE WASHINGTON HS VARSITY BOYS[2014]</p>
-            <p>SFS HS VARSITY BOYS[2018]</p>
+            <p>JAPAN EXE LEAGUE PLAYER [2019]</p>
+            <p>SFS HS VARSITY BOYS [2018]</p>
             <p>PEC SPORTS ACADEMY SUWON</p>
             <p>PRISM ACADEMY</p>
           </div>{" "}

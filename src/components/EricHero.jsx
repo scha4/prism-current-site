@@ -21,7 +21,7 @@ function EricHero() {
               <p>KOREA MENS 5v5 NAT'L TEAM</p>
               <p>GUANGZHO ASIA GAMES SILVER MEDAL</p>
               <p>FIBA 3X3 NAT'L TEAM</p>
-              <p>2X FIBA 3x3 WORLD CUP</p>
+              <p>2X FIBA 3X3 WORLD CUP</p>
               <p>TOKYO OLYMPIC QUALIFIERS</p>
               <h4 className="font-bold mt-3">COACHING</h4>
               <div className="text-lg ">
@@ -40,8 +40,13 @@ function EricHero() {
             </div>
           </h1>
         </div>
-        <div className=" lg:col-start-2 lg:flex item-center justify-center mb-10 flex py-4 ">
-          <img src="/ericPic4.jpg" className="lg:w-full px-4  " />
+        <div className="lg:col-start-2 lg:flex items-center justify-center mb-10 flex py-4">
+          <img
+            src="/ericPic4.jpg"
+            className="lg:w-full px-4"
+            style={{ borderRadius: "8px" }}
+            alt="Eric's Picture"
+          />
         </div>
         <div className="lg:hidden flex flex-col items-center justify-center text-lg  ">
           <h4 className="font-bold">PRO CAREER</h4>

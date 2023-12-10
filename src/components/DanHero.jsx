@@ -30,9 +30,9 @@ function DanHero() {
               <p>2X KOREA MENS 5v5 NAT'L TEAM</p>
 
               <p>FIBA 3X3 NAT'L TEAM</p>
-              <p>2X FIBA 3x3 WORLD CUP</p>
+              <p>2X FIBA 3X3 WORLD CUP</p>
               <p>2020 TOKYO OLYMPIC QUALIFIERS</p>
-              <p>FIBA 3X3 KOREA RANKING #1[2019-2021]</p>
+              <p>FIBA 3X3 KOREA RANKING #1 [2019-2021]</p>
             </div>
             <h4 className="font-bold mt-3">COACHING</h4>
             <div className="text-lg ">

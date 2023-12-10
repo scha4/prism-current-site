@@ -7,15 +7,16 @@ function Hero2() {
         <div className="  md:grid grid-cols-2 h-auto   ">
           <div className=" mx-auto max-w-screen-xl col-span-1  flex flex-col md:items-left justify-center space-y-7 ml-5 mt-6 text-white">
             <h1 className="text-2xl font-bold">BUILD YOUR SKILLS</h1>
-            <h1 className="text-xl font-normal">
-              Our Labs are designed to give players at least two times each week
-              to really rep out and build their skills sets over time to have
-              more freedom to physically perform in their games.
+            <h1 className="lg:text-xl text-lg font-normal">
+              Our training sessions offer players consistent weekly
+              opportunities to refine skills and enhance performance according
+              to your specific needs.
             </h1>
-            <h1 className="text-xl font-normal">
-              Overall, we will cover a variety of different skills throughout
-              that focus heavily on body positions, shooting, footwork, ball
-              handling, and finishing.
+            <h1 className="lg:text-xl text-lg font-normal">
+              The program covers essential aspects such as body positioning,
+              shooting, footwork, ball handling, and finishing techniques. Join
+              us for a focused training experience designed to elevate your
+              game.
             </h1>
           </div>
 
