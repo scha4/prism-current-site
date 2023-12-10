@@ -20,10 +20,10 @@ function Hero2() {
             </h1>
           </div>
 
-          <div className=" lg:flex items-center justify-center pt-10 pb-10 ">
+          <div className=" lg:flex items-center justify-center pt-10 pb-10">
             <img
               src="./campPic1.jpg"
-              className="  max-h-96 rounded-lg max-w-full "
+              className="  max-h-96 rounded-lg max-w-full mx-auto "
               alt="leaderImage"
             />
           </div>
