@@ -11,7 +11,7 @@ function SignUpHero() {
           src="./trainingpic1.jpg"
         />
 
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center ">
           <div className="w-full md:ml-14 ml-8">
             <Typography
               variant="lead"

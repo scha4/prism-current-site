@@ -14,9 +14,7 @@ function HomePage() {
     <>
       <div className="font-display">
         <NavbarMain />
-
         <VideoBack />
-
         <Hero2 />
         <Hero />
         <LogoHero />

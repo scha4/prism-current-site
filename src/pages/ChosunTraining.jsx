@@ -8,7 +8,6 @@ function ChosunTraining() {
     <>
       <div className="bg-black">
         <NavbarMain />
-
         <ChosunPics />
         <Footer />
       </div>

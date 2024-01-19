@@ -1,24 +1,20 @@
 import React from "react";
+import CommonImageGrid from "./CommonImageGrid.jsx";
 
 function ChosunPics() {
-  return (
-    <>
-      <div className="lg:mx-28  my-5">
-        <div className="grid lg:grid-cols-3 gap-3 grid-cols-2 mx-4">
-          <img src="chosunCamp/chosun1.JPG" />
-          <img src="chosunCamp/chosun5.JPG" />
-          <img src="chosunCamp/chosun3.JPG" />
+   const imgArr = [
+    "chosunCamp/chosun1.JPG",
+    "chosunCamp/chosun5.JPG",
+    "chosunCamp/chosun3.JPG",
+    "chosunCamp/chosun2.JPG",
+    "chosunCamp/chosun6.JPG",
+    "chosunCamp/chosun7.JPG",
+    "chosunCamp/chosun8.JPG",
+    "chosunCamp/chosun9.JPG",
+    "chosunCamp/chosun10.JPG"
+  ]
 
-          <img src="chosunCamp/chosun2.JPG" />
-          <img src="chosunCamp/chosun6.JPG" />
-          <img src="chosunCamp/chosun7.JPG" />
-          <img src="chosunCamp/chosun8.JPG" />
-          <img src="chosunCamp/chosun9.JPG" />
-          <img src="chosunCamp/chosun10.JPG" />
-        </div>
-      </div>
-    </>
-  );
+  return <CommonImageGrid imgArr={imgArr} />;
 }
 
 export default ChosunPics;

@@ -3,7 +3,7 @@ import React from "react";
 function AboutUs() {
   return (
     <>
-      <div className="py-12 font-display">
+      <div className="py-12 font-display 2xl:px-52 xl:px-40">
         <div className="flex items-center justify-center">
           <img src="./prismLogo.png" className="w-48 h-48 " />
         </div>

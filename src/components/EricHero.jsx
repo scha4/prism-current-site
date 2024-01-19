@@ -7,7 +7,7 @@ function EricHero() {
     <>
       <div
         id="eric"
-        className="lg:grid grid-cols-2 flex-col py-10 gap-3 font-display "
+        className="lg:grid grid-cols-2 flex-col py-10 gap-3 font-display  2xl:px-52"
       >
         {" "}
         <div className="lg:col-start-1 flex flex-col gap-5 items-center justify-center ">
@@ -43,7 +43,7 @@ function EricHero() {
         <div className="lg:col-start-2 lg:flex items-center justify-center mb-10 flex py-4">
           <img
             src="/ericPic4.jpg"
-            className="lg:w-full px-4"
+            className="lg:w-full px-4 2xl:mr-32 xl:mr-32"
             style={{ borderRadius: "8px" }}
             alt="Eric's Picture"
           />

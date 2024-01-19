@@ -3,7 +3,7 @@ import React from "react";
 function CurrentEvent() {
   return (
     <>
-      <div className="flex flex-col items-center  bg-black  text-white ">
+      <div className="flex flex-col items-center  bg-black  text-white 2xl:px-72 xl:px-16">
         <div className="lg:text-5xl mt-8 font-bold mb-10  text-3xl text-white ">
           EVENTS
         </div>

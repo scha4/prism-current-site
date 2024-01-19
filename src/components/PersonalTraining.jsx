@@ -4,7 +4,7 @@ import { Typography, Button } from "@material-tailwind/react";
 function PersonalTraining() {
   return (
     <>
-      <div className="lg:py-20 py-8 bg-slate-100 font-display">
+      <div className="lg:py-20 py-8 bg-slate-100 font-display 2xl:px-36">
         <div className="md:grid grid-cols-2 h-auto">
           <div className="mx-auto max-w-screen-xl col-span-1 flex flex-col md:items-left justify-center space-y-7  mt-6">
             <h1 className="text-2xl font-bold lg:ml-5 text-center  ">

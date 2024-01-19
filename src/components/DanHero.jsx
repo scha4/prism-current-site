@@ -10,12 +10,12 @@ function DanHero() {
   return (
     <>
       <div className="border-b border-gray-500 my-4 font-display"></div>
-      <div className="lg:grid grid-cols-2 flex-col py-10 gap-3 font-display ">
+      <div className="lg:grid grid-cols-2 flex-col py-10 gap-3 font-display 2xl:px-52">
         <h1 className="text-3xl font-semibold text-blue-700 text-center lg:hidden">
           COACH DAN
         </h1>
         <div className=" lg:col-start-1 lg:flex item-center justify-center mb-10 flex py-4 ">
-          <img src="/danPic3.jpg" className="lg:w-full px-4  " />
+          <img src="/danPic3.jpg" className="lg:w-full px-4   2xl:ml-32 xl:ml-32" />
         </div>{" "}
         <div className="col-start-2 flex flex-col gap-5 items-center justify-center ">
           <h1 className="text-3xl font-semibold text-blue-700 hidden lg:flex">

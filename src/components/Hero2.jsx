@@ -3,7 +3,7 @@ import { Typography, Button } from "@material-tailwind/react";
 function Hero2() {
   return (
     <>
-      <div className="lg:py-20 py-8 bg-slate-100 bg-black ">
+      <div className="lg:py-20 py-8 bg-slate-100 bg-black 2xl:px-52 xl:px-16">
         <div className="  md:grid grid-cols-2 h-auto   ">
           <div className=" mx-auto max-w-screen-xl col-span-1  flex flex-col md:items-left justify-center space-y-7 ml-5 mt-6 text-white">
             <h1 className="text-2xl font-bold">BUILD YOUR SKILLS</h1>
