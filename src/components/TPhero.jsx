@@ -3,7 +3,7 @@ import { Typography, Button } from "@material-tailwind/react";
 function TPhero() {
   return (
     <>
-      <div className="lg:grid grid-cols-2 flex-col py-10 gap-3 bg-black font-display   ">
+      <div className="lg:grid grid-cols-2 flex-col py-10 gap-3 bg-black font-display    2xl:px-52  xl:px-16">
         {" "}
         <div className="col-start-1 flex flex-col gap-5 items-center justify-center">
           <h1 className="text-4xl font-semibold italic text-white">
@@ -16,7 +16,7 @@ function TPhero() {
           </h1>
         </div>
         <div className=" lg:col-start-2 lg:flex item-center justify-center mb-10 flex py-4 ">
-          <img src="/testPic3.JPG" className="lg:w-full px-4  " />
+          <img src="/testPic3.JPG" className="lg:w-full px-4   2xl:mr-32 xl:mr-16" />
         </div>
       </div>
       <div className="bg-black text-white  text-center lg:h-32  h-20 italic flex items-center justify-center text-3xl lg:text-5xl border-2 border-white ">

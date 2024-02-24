@@ -68,7 +68,7 @@ export default function NavbarMain() {
       }}
       className="inset-0 z-10  mx-auto max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 bg-black border-white border-b-4"
     >
-      <div className="container mx-auto flex items-center justify-between z-10  ">
+      <div className="container mx-auto flex items-center justify-between z-10 2xl:px-36 ">
         <a href="/">
           <img src="./prismWord.png" className="w-24 h-18  " />
         </a>

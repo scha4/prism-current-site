@@ -7,7 +7,7 @@ function EricHero() {
     <>
       <div
         id="eric"
-        className="lg:grid grid-cols-2 flex-col py-10 gap-3 font-display "
+        className="lg:grid grid-cols-2 flex-col py-10 gap-3 font-display  2xl:px-52"
       >
         {" "}
         <div className="lg:col-start-1 flex flex-col gap-5 items-center justify-center ">
@@ -21,7 +21,7 @@ function EricHero() {
               <p>KOREA MENS 5v5 NAT'L TEAM</p>
               <p>GUANGZHO ASIA GAMES SILVER MEDAL</p>
               <p>FIBA 3X3 NAT'L TEAM</p>
-              <p>2X FIBA 3x3 WORLD CUP</p>
+              <p>2X FIBA 3X3 WORLD CUP</p>
               <p>TOKYO OLYMPIC QUALIFIERS</p>
               <h4 className="font-bold mt-3">COACHING</h4>
               <div className="text-lg ">
@@ -34,14 +34,19 @@ function EricHero() {
               <div className="flex flex-col place-items-center">
                 <h4 className="font-bold mt-3">SOCIAL</h4>
                 <a target="_blank" href="https://www.instagram.com/sj_lee14/">
-                  <AiFillInstagram size={60} className="hover:fill-blue-500" />
+                  <AiFillInstagram size={50} className="hover:fill-blue-500" />
                 </a>
               </div>
             </div>
           </h1>
         </div>
-        <div className=" lg:col-start-2 lg:flex item-center justify-center mb-10 flex py-4 ">
-          <img src="/ericPic4.jpg" className="lg:w-full px-4  " />
+        <div className="lg:col-start-2 lg:flex items-center justify-center mb-10 flex py-4">
+          <img
+            src="/ericPic4.jpg"
+            className="lg:w-full px-4 2xl:mr-32 xl:mr-32"
+            style={{ borderRadius: "8px" }}
+            alt="Eric's Picture"
+          />
         </div>
         <div className="lg:hidden flex flex-col items-center justify-center text-lg  ">
           <h4 className="font-bold">PRO CAREER</h4>
@@ -64,7 +69,7 @@ function EricHero() {
           <div className="flex flex-col place-items-center">
             <h4 className="font-bold mt-3">SOCIAL</h4>
             <a href="https://www.instagram.com/sj_lee14/">
-              <AiFillInstagram size={60} className="hover:fill-blue-500" />
+              <AiFillInstagram size={50} className="hover:fill-blue-500" />
             </a>
           </div>
         </div>

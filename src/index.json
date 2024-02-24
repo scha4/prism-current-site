@@ -6,7 +6,7 @@
         "id": "1",
         "name": "Coach Eric",
 
-        "url": "<a href='/trainers'>Learn More </a>",
+        "url": "<a href='/trainers#eric'>Learn More </a>",
         "image": "/CE1.jpg"
       },
       {
