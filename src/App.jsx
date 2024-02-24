@@ -10,6 +10,7 @@ import LevelUpCamp from "./pages/LevelUpCamp";
 import ChosunTraining from "./pages/ChosunTraining";
 import PEC from "./pages/PEC";
 import ChungjooYouth from "./pages/ChungjooYouth";
+import Classes from './pages/class/Classes';
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/trainers" element={<TrainersPage />}></Route>
         <Route path="/events" element={<EventsPage />}></Route>
         <Route path="/signup" element={<SignUpPage />}></Route>
+        <Route path="/classes" element={<Classes />}></Route>
         <Route path="/contactus" element={<ContactUsPage />}></Route>
         <Route path="/byAnyMeans" element={<ByAnyMeansCamp />}></Route>
         <Route path="/levelUp" element={<LevelUpCamp />}></Route>
