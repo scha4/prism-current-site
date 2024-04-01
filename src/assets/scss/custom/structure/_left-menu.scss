@@ -1,0 +1,250 @@
+$examplebar-width: 500px;
+@font-face {
+font-family: 'apple-system';
+src: local('BlinkMacSystemFont'),
+local('Segoe UI'),
+local('Roboto'),
+local('Oxygen'),
+local('Ubuntu'),
+local('Fira Sans'),
+local('Droid Sans'),
+local('Helvetica Neue'),
+sans-serif;
+}
+
+#loading-bar {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #3b5de7;
+}
+
+#loading-bar-progress {
+  height: 100%;
+  width: 0;
+  background-color: #ffffff;
+  animation: loading-bar-progress 0.5s linear infinite;
+}
+
+@keyframes loading-bar-progress {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+// .left-menu{
+//     background-color: #fafbfc;
+//     border-right:1px solid #e5e5e5;
+//     width:10px;
+//     position: fixed;
+//     top: 50px;
+//     bottom: 0px;
+// }
+
+// .left-menu.active{
+//     position: fixed;
+//     top: 50px;
+//     bottom: 0px;
+//     width:15%;
+// }
+.left-menu-wrapper{
+  position: relative;
+  transition: width 0.5s;
+  .sub-menu {
+    display: none;
+  }
+
+  .sub-menu a {
+    display: block;
+    padding-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    text-decoration: none;
+  }
+  .item-wrapper{
+    width:100%;
+    line-height: 30px; 
+  }
+  .arrow-right-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .arrow-right {
+    transition: transform 0.1s ease-in-out;
+  }
+  .menu-item-sub{
+    display: none;
+    margin-left: 10px;
+  }
+}
+.left-menu {
+    transition: width 0.3s ease-in-out;
+    width: 270px;
+    background-color: #fafbfc;
+    border-right:1px solid #e5e5e5;
+    position: fixed;
+    top: 50px;
+    height:100%;
+    padding: 30px 10px;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .left-menu.active {
+    width: 220px;
+    height:100%;
+  }
+  .left-menu-items {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  
+  .left-menu.active .left-menu-items {
+    height: auto;
+    opacity: 1;
+    transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s;
+  }
+
+  .left-menu.active .left-title-div {
+    height: auto;
+    opacity: 1;
+    transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s;
+  }
+  .arrow-right-wrapper{
+    position: relative;
+  }
+  .fas.arrow-right{
+    position:absolute;
+    top:13px;
+    left:5px;
+  }
+
+  
+  .left-menu-item{
+    display: block;
+    padding: 0 10px;
+    line-height: 1.2;
+    padding-left: 24px;
+    border-radius: 4px;
+    min-height:40px;
+    display: flex;
+    align-items: center;
+    color:#626c76;
+    overflow: hidden;
+  }
+  
+  .left-menu-item.active{
+    position: relative;
+    background-color: #E6EFFC;
+    color: #0052CC;
+  }
+  .left-menu-item:hover{
+    position: relative;
+    background-color: #E6EFFC;
+    color: #0052CC;
+  }
+
+  .left-menu-item.active::before{
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 4px;
+    left: 0px;
+    top: 12px;
+    background: #0052CC;
+    border-radius: 0px 1.998px 1.998px 0px;
+  }
+  
+  .menu-toggle-button {
+    transition: right 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+    top: 80px;
+    right: -14px;
+    width: 25px;
+    height: 25px;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #d6d6d6;
+    cursor: pointer;
+    
+  }
+  
+  .menu-toggle-button:hover {
+    background-color: #007bff;
+  }
+  
+  .menu-toggle-button:hover i {
+    color: #fff;
+  }
+  
+  .menu-toggle-button i {
+    color: #007bff;
+  }
+
+  .main-content{
+    display: flex;
+  }
+  .left-img{
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin: 8px 0;
+    overflow: hidden;
+    
+  }
+
+  .left-title-div{
+    display: flex;
+    padding: 0px 10px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  .left-title-div{
+    h5, p{
+      margin-bottom: 0;
+    }
+    p.left-menu-title{
+      font-weight: 600;
+      font-size: 0.9rem; 
+    }
+    p.left-menu-desc{
+      font-size: 0.7rem;
+      color: #6b778c;
+    }
+    .title-div{
+      margin-left:10px;
+    }
+  }
+
+  .divide-line{
+    border: 0;
+    border-top: 2px solid #e5e5e5;
+    margin: 20px 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+    
+  .left-menu.active .divide-line{
+    height: auto;
+    opacity: 1;
+    transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out 0.2s;
+  }

@@ -37,11 +37,7 @@ export default function NavbarMain() {
           Trainers
         </a>
       </Typography>
-      <Typography as="li" className="p-1 font-bold py-2  ">
-        <a href="/classes" className="flex items-center font-display">
-          Classes
-        </a>
-      </Typography>
+    
       <Typography as="li" className="p-1 font-bold py-2  ">
         <a href="/contactus" className="flex items-center font-display">
           Contact Us

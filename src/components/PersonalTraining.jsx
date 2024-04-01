@@ -41,8 +41,7 @@ function PersonalTraining() {
               </ul>
             </div>
             <a
-              target="_blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSf0A8X908KeOUAY0NFFnbjpN1d_fxO9aAUuAj4XQJhKc2Tzww/viewform"
+              href="/signupform"
             >
               <div className="flex items-center justify-center ">
                 <Button className=" bg-black lg:w-1/3 font-display text-lg  ">

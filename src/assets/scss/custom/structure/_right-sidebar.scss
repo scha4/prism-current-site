@@ -1,0 +1,193 @@
+//
+// right-sidebar.scss
+//
+$examplebar-width: 500px;
+@font-face{
+    font-family: 'cascadia';
+    src: url('../../../fonts/CascadiaCode-2111.01/ttf/CascadiaMono.ttf') format('truetype');
+    font-weight:350;
+}
+
+.right-bar {
+   
+    background-color: $card-bg;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+    display: block;
+    position: fixed;
+    width: $rightbar-width;
+    z-index: 9999;
+    right: -($rightbar-width + 10px);
+    top: 0;
+    bottom: 0;
+    transition: transform 0.5s ease;
+    transform: translate(0px, 0px);
+    float: right;
+    .right-bar-toggle {
+        background-color: lighten($dark, 7%);
+        height: 24px;
+        width: 24px;
+        line-height: 24px;
+        color: $gray-200;
+        text-align: center;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: lighten($dark, 10%);
+        }
+    }
+}
+
+.div-code{
+    // display:flex;
+    // flex-direction: column;
+    // flex-wrap: wrap;
+    // gap:0;
+    color:whitesmoke;
+}
+
+.example-bar{
+    width: $examplebar-width;
+    z-index: 9999;
+    right: -($examplebar-width + 10px);
+    p{
+        font-size:.875rem;
+    }
+    .div-copy{
+        background-color: #343541;
+        display: flex;
+        justify-content: space-between;
+        padding: 7px;
+        border-radius: 5px 5px  0 0;
+        border-spacing: 0;
+        i{
+            color:white;
+            position:relative;
+        }
+        cursor:pointer;
+        i:hover{
+            color: #787989;
+        }
+       
+    }
+    
+    code.example-code{
+        resize: none;
+        overflow:none;
+        width: 100%;
+        min-height:25vh;
+        border: none;
+        padding: 10px;
+        background-color: #000000;
+        color: whitesmoke;
+        border-radius: 0 0 10px 10px;
+        font-family: "cascadia";
+        font-size:1rem;
+        position:relative;
+        line-height:1.2rem;
+        &:after{
+            content:'Copied!';
+            position: absolute;
+            top:calc(50% - 50px);
+            left: calc(50% - 50px);
+            background-color:#373742;
+            border: none;
+            padding:10px;
+            border-radius:5px;
+            font-size:.875rem;
+            color:white;
+            opacity:0;
+        }
+        &.fade-in:after{
+            opacity:1;
+            transition:1s;
+        }
+        &.fade-out:after{
+            opacity:0;
+            transition:1s;
+        }   
+    }
+    
+    code.example-code2{
+        resize: none;
+        width: 100%;
+        min-height: 25vh;
+        border: none;
+        padding: 10px;
+        background-color: #000000;
+        color: whitesmoke;
+        border-radius: 0 0 10px 10px;
+        font-family: "cascadia";
+        font-size:1rem;
+        position:relative;
+        line-height:1.2rem;
+        &:after{
+            content:'Copied!';
+            position: absolute;
+            top:calc(50% - 50px);
+            left: calc(50% - 50px);
+            background-color:#373742;
+            border: none;
+            padding:10px;
+            border-radius:5px;
+            font-size:.875rem;
+            color:white;
+            opacity:0;
+        }
+        &.fade-in:after{
+            opacity:1;
+            transition:1s;
+        }
+        &.fade-out:after{
+            opacity:0;
+            transition:1s;
+        }   
+    }
+}
+
+
+
+// Rightbar overlay
+.rightbar-overlay {
+    background-color: rgba($dark, 0.55);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    z-index: 9998;
+    transition: all .2s ease-out;
+}
+
+.right-bar-enabled {
+    .right-bar {
+        transition: transform 0.5s ease;
+        transform: translate(-($rightbar-width + 10px), 0px);
+    }
+    .example-bar{
+        display:none;
+    }
+    .rightbar-overlay {
+        display: block;
+    }
+}
+.example-bar-enabled {
+    .example-bar{
+        transform: translate(-($examplebar-width + 10px), 0px);
+    }
+    .rightbar-overlay {
+        display: block;
+    }
+}
+
+
+@include media-breakpoint-down(lg) {
+    .right-bar {
+        overflow: auto;
+        .slimscroll-menu {
+            height: auto !important;
+        }
+    }
+}
+
+
