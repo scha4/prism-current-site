@@ -11,7 +11,7 @@ function PersonalTraining() {
               PERSONAL TRAINING
             </h1>
             <img
-              src="./teachingPic1.jpg"
+              src="./levelCampPictures/levelUp2.JPG"
               className="rounded-lg mx-2 md:hidden "
               alt="leaderImage"
             />
@@ -53,7 +53,7 @@ function PersonalTraining() {
 
           <div className="hidden md:flex items-center justify-center pt-10 pb-10">
             <img
-              src="./teachingPic1.jpg"
+              src="./levelCampPictures/levelUp2.JPG"
               className="lg:w-3/4 max-w-96 rounded-lg"
               alt="leaderImage"
             />

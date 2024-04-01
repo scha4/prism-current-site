@@ -15,7 +15,10 @@ function DanHero() {
           COACH DAN
         </h1>
         <div className=" lg:col-start-1 lg:flex item-center justify-center mb-10 flex py-4 ">
-          <img src="/danPic3.jpg" className="lg:w-full px-4   2xl:ml-32 xl:ml-32" />
+          <img
+            src="/danPic3.jpg"
+            className="lg:w-full px-4   2xl:ml-32 xl:ml-32"
+          />
         </div>{" "}
         <div className="col-start-2 flex flex-col gap-5 items-center justify-center ">
           <h1 className="text-3xl font-semibold text-blue-700 hidden lg:flex">
@@ -36,6 +39,7 @@ function DanHero() {
             </div>
             <h4 className="font-bold mt-3">COACHING</h4>
             <div className="text-lg ">
+              <p>COACH FOR SEATTLE SUPERHAWKS</p>
               <p>BFL PREP ACADEMY</p>
               <p>BOTHEL HIGH SCHOOL VARSITY</p>
             </div>
