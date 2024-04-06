@@ -41,7 +41,7 @@ function PersonalTraining() {
               </ul>
             </div>
             <a
-              href="/signupform"
+              href="/signupform/personal"
             >
               <div className="flex items-center justify-center ">
                 <Button className=" bg-black lg:w-1/3 font-display text-lg  ">

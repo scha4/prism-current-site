@@ -2,6 +2,25 @@ import axios from "axios"
 import { post, del, get, put } from "./api_helper"
 import * as url from "./url_helper"
 
+
+//apply apis
+export const getApplys = data => get(url.GET_APPLYS)
+export const getApply = data => get(url.GET_APPLY)
+export const postApply = data => post(url.POST_APPLY, data)
+export const putApply = data => put(url.PUT_APPLY, data)
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Gets the logged in user data from local session
 export const getLoggedInUser = () => {
   const user = localStorage.getItem("user")

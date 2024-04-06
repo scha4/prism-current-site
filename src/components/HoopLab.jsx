@@ -45,8 +45,7 @@ function HoopLab() {
               </ul>
             </div>
             <a
-              target="_blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe0R1BvH-R2YFktiO7kOX42qvlTQNQ0uvT1eW7mTrTqMZy3fw/viewform?vc=0&c=0&w=1&flr=0"
+              href="/signupform/monday-hooplab"
             >
               <div className="flex items-center justify-center ">
                 <Button className=" bg-black lg:w-1/3 font-display text-lg  ">

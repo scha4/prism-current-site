@@ -1,3 +1,26 @@
+// apply apis(signup)
+export const GET_APPLYS = '/api/applys'
+export const GET_APPLY = '/api/apply'
+export const POST_APPLY = '/api/apply'
+export const PUT_APPLY = '/api/apply'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //REGISTER
 export const POST_FAKE_REGISTER = "/post-fake-register"
 

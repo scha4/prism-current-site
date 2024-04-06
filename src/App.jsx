@@ -20,8 +20,9 @@ import NonAuthLayout from './components/admin/NonAuthLayout'
 
 import { useSelector } from 'react-redux';
 import SignupLogs from './pages/admin/SignupLogs';
+import SignUpCompletePage from './pages/SignUpCompletePage';
 function App() {
-  fakeBackend();
+  // fakeBackend();
   const layout = useSelector(state=> state.layout)
   function getLayout() {
     let layoutCls = VerticalLayout
@@ -47,7 +48,9 @@ function App() {
         <Route path="/trainers" element={<TrainersPage />}></Route>
         <Route path="/events" element={<EventsPage />}></Route>
         <Route path="/signup" element={<SignUpPage />}></Route>
-        <Route path="/signupform" element={<SignUpFormPage />}></Route>
+        <Route path="/signupform/personal" element={<SignUpFormPage />}></Route>
+        <Route path="/signupform/monday-hooplab" element={<SignUpFormPage />}></Route>
+        <Route path="/signupform/complete" element={<SignUpCompletePage />}></Route>
         <Route path="/contactus" element={<ContactUsPage />}></Route>
         <Route path="/byAnyMeans" element={<ByAnyMeansCamp />}></Route>
         <Route path="/levelUp" element={<LevelUpCamp />}></Route>

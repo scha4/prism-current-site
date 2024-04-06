@@ -7,20 +7,17 @@ import Camp from "../components/Camp";
 import SignUpFormPersonal from '../components/SignUpFormPersonal';
 import SignUpFormMondayHoopLab from '../components/SignUpFormMondayHoopLab';
 import { useLocation } from 'react-router-dom';
-function SignUpFormPage() {
+import SignUpComplete from '../components/SignUpComplete';
+function SignUpCompletePage() {
   const location = useLocation();
 
   return (
     <>
       <NavbarMain />
-      {location && location.pathname.includes('personal')?
-      <SignUpFormPersonal/>
-      :
-      <SignUpFormMondayHoopLab/>
-      }
+      <SignUpComplete />
       <Footer />
     </>
   );
 }
 
-export default SignUpFormPage;
+export default SignUpCompletePage;

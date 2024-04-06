@@ -1,35 +1,35 @@
 import React, { useState } from 'react';
 
-function WeekDaysCalendar() {
-  const [selectedId, setSelectedId] = useState(null);
+function WeekDaysCalendar({selectedId,setSelectedId}) {
+  // const [selectedId, setSelectedId] = useState(null);
   const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const classInfo = [
     {
-      id: 1,
+      id: 'Thu 18:30 Lv2',
       day: 'Thu',
       time: '18:30',
       name: 'Lv2'
     },
     {
-      id: 2,
+      id: 'Thu 20:00 Lv1',
       day: 'Thu',
       time: '20:00',
       name: 'Lv1'
     },
     {
-      id: 3,
+      id: 'Sun 18:30 Lv2',
       day: 'Sun',
       time: '18:30',
       name: 'Lv2'
     },
     {
-      id: 4,
+      id: 'Sun 20:00 Lv1',
       day: 'Sun',
       time: '20:00',
       name: 'Lv1'
     },
     {
-      id: 5,
+      id: 'Sun 21:30 Lv2',
       day: 'Sun',
       time: '21:30',
       name: 'Lv2'

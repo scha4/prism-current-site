@@ -66,7 +66,7 @@ export default function NavbarMain() {
     >
       <div className="container mx-auto flex items-center justify-between z-10 2xl:px-36 ">
         <a href="/">
-          <img src="./prismWord.png" className="w-24 h-18  " />
+          <img src="/prismWord.png" className="w-24 h-18  " />
         </a>
 
         <div className="hidden lg:block ">{navList}</div>
