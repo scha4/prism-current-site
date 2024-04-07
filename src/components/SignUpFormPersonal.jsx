@@ -132,11 +132,43 @@ const handleSubmit = ()=>{
     firstClass:selectedId,
     secondClass:selectedId2,
   }
-  console.log(data)
+  if(data.name == '' || data.name == undefined){
+        alert('성함을 입력해주세요!');
+        return;
+    }
+
+    if(data.age == '' || data.age == undefined || isNaN(data.age)){
+        alert('나이를 올바르게 입력해주세요!');
+        return;
+    }
+
+    if(data.gender == '' || data.gender == undefined){
+        alert('성별을 입력해주세요!');
+        return;
+    }
+
+    if(data.tel == '' || data.tel == undefined){
+        alert('전화번호를 입력해주세요!');
+        return;
+    }
+
+    if(data.package == '' || data.package == undefined){
+        alert('패키지를 선택해주세요!');
+        return;
+    }
+
+    if(data.firstClass == '' || data.firstClass == undefined){
+        alert('1순위 수업 시간을 선택해주세요!');
+        return;
+    }
+
+    if(data.secondClass == '' || data.secondClass == undefined){
+        alert('2순위 수업 시간을 선택해주세요!');
+        return;
+    }
   const response = postApply(data).then(()=>{
-    // navigate('/signupform/complete')
+    navigate('/signupform/complete')
   })
-  // navigate('/signupform/complete')
 }
 
 
@@ -334,14 +366,28 @@ const handleSubmit = ()=>{
           </div>  
         </div>
         <div className={`step-content ${currentStep === 3 ? 'show' : ''}`}>
-          <div className='flex flex-col items-center justify-center space-y-6 my-8 w-[700px]'>
+          <div className='flex flex-col items-center justify-center space-y-6 my-2 w-[700px]'>
             <Typography as="h2" variant="h2" className='text-2xl font-bold mb-4'>클래스 시간 선택</Typography>
             <span className='w-full class-title '>희망 1순위 선택</span>
             <WeekCalendar selectedId={selectedId} setSelectedId={setSelectedId}/>
             <span className='w-full class-title'>희망 2순위 선택</span>
             <WeekCalendar selectedId={selectedId2} setSelectedId={setSelectedId2}/>
+            <div className='flex flex-col   space-y-1 my-8 w-[700px] h-[200px]'>
+              <span>질문 있으시면 @im_wonjun DM 으로 문의 해주세요 :)</span>
+              <span>If you have any questions you can DM @im_wonjun :)</span>
+              <input
+                className='input input-bordered w-full h-12 px-4'
+                placeholder="comment"
+                name="comment"
+                type="text"
+                value={formData.comment}
+                onChange={handleChange}
+              />
+            </div>
           </div>
+          
         </div>
+        
       </div>
 
       <div className='w-[100px] '>

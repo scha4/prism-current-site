@@ -42,14 +42,19 @@ function WeekDaysCalendar({selectedId,setSelectedId}) {
   return (
      <div className='pretendard flex flex-col items-center justify-center w-[700px]' style={{marginTop:'10px'}}>
       <div className='flex text-center border border-gray-200 rounded-lg'>
-        {weekDays.map((day, dayIndex) => (
+        {weekDays.map((day, dayIndex) => {
+          let isClassExist = false
+          let isDone = false
+          return (
           <React.Fragment key={dayIndex}>
             <div className=''>
             <div className={`day-item ${day === 'Sun' && 'sunday-text'} ${day === 'Sat' && 'saturday-text'} `} >
             <span>{day}</span>  
             </div> {/* 요일 표시 */}
             <div className='flex flex-col'>
-            {classInfo.filter(row => row.day === day).map((row, index) => (
+            {classInfo.filter(row => row.day === day).map((row, index) => {
+              isClassExist = true
+              return (
               <div
               style={{position:'relative'}}
                 key={index}
@@ -64,19 +69,27 @@ function WeekDaysCalendar({selectedId,setSelectedId}) {
                 </div>
                
               </div>
-            ))}
-            {classInfo.filter(row => row.day !== day).map((row, index) => (
+            )
+        }
+            )}
+            {classInfo.filter(row => row.day !== day && !isClassExist).map((row, index) => {
+              if(isDone) return;
+              isDone = true
+              return (
               <div
               style={{position:'relative'}}
                 key={index}
                 className={`class-item    ${day === 'Sat' && 'saturday-border'} default `}
               >
               </div>
-            ))}
+            )
+            })}
             </div>
             </div>
           </React.Fragment>
-        ))}
+        )
+      }
+        )}
       </div>
     </div>
   );
