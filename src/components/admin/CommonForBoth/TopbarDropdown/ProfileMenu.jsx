@@ -24,12 +24,12 @@ const ProfileMenu = props => {
 
   useEffect(() => {
     if (localStorage.getItem("authUser")) {
-      if (REACT_APP_DEFAULTAUTH === "firebase") {
+      if ('jwt' === "firebase") {
         const obj = JSON.parse(localStorage.getItem("authUser"))
         setusername(obj.displayName)
       } else if (
-        REACT_APP_DEFAULTAUTH === "fake" ||
-        REACT_APP_DEFAULTAUTH === "jwt"
+        'jwt' === "fake" ||
+        'jwt' === "jwt"
       ) {
         const obj = JSON.parse(localStorage.getItem("authUser"))
         setusername(obj.username)

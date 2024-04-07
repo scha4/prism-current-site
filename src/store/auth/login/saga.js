@@ -18,7 +18,7 @@ import {
 } from "../../../helpers/fakebackend_helper"
 
 const fireBaseBackend = getFirebaseBackend()
-const defaultAuth = REACT_APP_DEFAULTAUTH
+const defaultAuth = 'jwt'
 function* loginUser({ payload: { user, navigate } }) {
 
   try {
