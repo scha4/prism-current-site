@@ -1,5 +1,4 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-@import "./assets/scss/theme.scss";
 
 @tailwind base;
 @tailwind components;
@@ -231,6 +230,7 @@ a.wow.current{
 .pakage-item{
   cursor: pointer;
   width: 233px;
+  min-width:200px;
   height:387px;
   border: 2px solid #222222;
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;

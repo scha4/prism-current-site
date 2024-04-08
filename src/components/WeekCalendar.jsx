@@ -40,7 +40,7 @@ function WeekDaysCalendar({selectedId,setSelectedId}) {
   };
 
   return (
-     <div className='pretendard flex flex-col items-center justify-center w-[700px]' style={{marginTop:'10px'}}>
+     <div className='pretendard flex flex-col sm:items-center justify-center sm:w-[700px] overflow-x-auto w-[95vw] sm:overflow-hidden' style={{marginTop:'10px'}}>
       <div className='flex text-center border border-gray-200 rounded-lg'>
         {weekDays.map((day, dayIndex) => {
           let isClassExist = false

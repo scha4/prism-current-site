@@ -26,7 +26,7 @@ function Hero() {
             <Typography
               variant="lead"
               color="white"
-              className=" md:text-3xl font-bold text-md mt-5 font-display "
+              className=" md:text-3xl font-bold text-md mt-5 sm:mt-1 font-display "
             >
               Get basketball training from the best
             </Typography>

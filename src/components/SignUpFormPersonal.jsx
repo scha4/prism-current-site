@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Typography, Button } from "@material-tailwind/react";
 import Select from 'react-select';
 import WeekCalendar from './WeekCalendar';
@@ -170,24 +170,31 @@ const handleSubmit = ()=>{
     navigate('/signupform/complete')
   })
 }
-
-
+const scrollRef = useRef(null);
+useEffect(() => {
+  // 스크롤 가능한 요소의 가로 스크롤 위치를 조정하여 중간에 위치하도록 함
+  if (scrollRef.current) {
+    const containerWidth = scrollRef.current.offsetWidth;
+    const contentWidth = scrollRef.current.scrollWidth;
+    scrollRef.current.scrollLeft = (contentWidth - containerWidth) / 2;
+  }
+}, []); // 최초 렌더링 시에만 실행되도록 함
   return (
     <>
-      <div className='flex justify-center mb-10 mt-5 flex-col items-center pretendard'>
-        <div className='readme-text-div w-[700px] flex justify-center  flex-col '> 
-        <div className='flex justify-between'>
+      <div className='flex justify-center mb-10 mt-5 flex-col items-center pretendard p-4'>
+        <div className='readme-text-div sm:w-[700px] md:w-[700px] lg:w-[700px] flex justify-center flex-col '> 
+        <div className='flex justify-between ml-2 mr-2'>
             <span className='italic'>sign-up / personal training</span>
-            <div className="form-check form-switch">
+            <div className="form-check form-switch flex">
               <input type="checkbox" className="form-check-input checkbox" id="checkbox_1" onChange={()=>{setLang(lang=='kor'?'eng':'kor')}}/>
-              <label className="form-check-label" for="checkbox_1">{lang}</label>
+              <label className="form-check-label ml-1" for="checkbox_1">{lang}</label>
             </div>
         </div>
          
         {
           lang == 'kor'?
           <React.Fragment>
-          <Typography as="h2" variant="h2" className='text-center mb-5 mt-5 pretendard'>신청하시기 전에 꼭 읽어주세요!</Typography>
+          <Typography as="h2" variant="h2" className='text-center mb-5 mt-5 pretendard text-2xl '>신청하시기 전에 꼭 읽어주세요!</Typography>
         <div className='readme-text pretendard'>
           <div>
             <span>저희 그룹 스킬 트레이닝 클래스에 관심 주셔서 감사합니다!
@@ -259,7 +266,7 @@ const handleSubmit = ()=>{
       </div>
       <div className='flex  step-container flex-col' style={{ height: containerHeight, overflow: 'visible', transition: 'height 0.5s ease' }}>
       <div className={`step-content show`}>
-              <div className='flex flex-col items-center  space-y-6 my-8 w-[700px] h-[300px]'>
+              <div className='flex flex-col items-center  space-y-6 my-8 w-full  sm:w-[700px] md: h-[300px]'>
               <Typography as="h2" variant="h2" className='text-2xl font-bold mb-4'>신청 정보</Typography>
               <form className='signup-form flex flex-col items-center space-y-4 w-full'>
                 <input
@@ -322,9 +329,9 @@ const handleSubmit = ()=>{
             </div>
         </div>
         <div className={`step-content ${currentStep === 2 ||currentStep === 3 ? 'show' : ''}`}>
-          <div className='flex flex-col items-center justify-center items-center space-y-6 my-8 w-[600px]'>
+          <div className='flex flex-col items-center justify-center items-center space-y-6 my-8 sm:w-full md:w-[600px]'>
             <Typography as="h2" variant="h2" className='text-2xl font-bold mb-4'>패키지 선택</Typography>
-              <div className='flex '>
+              <div className='flex overflow-x-auto w-[95vw] sm:w-full' ref={scrollRef} >
                 {packages.map((pkg) => (
                   <div className={`${selectedPackage === pkg.id ? 'active' : ''} ${selectedPackage !== null && selectedPackage !== pkg.id ? 'inactive' : ''} pakage-item flex-col flex items-center`}>
                   <div
@@ -366,13 +373,13 @@ const handleSubmit = ()=>{
           </div>  
         </div>
         <div className={`step-content ${currentStep === 3 ? 'show' : ''}`}>
-          <div className='flex flex-col items-center justify-center space-y-6 my-2 w-[700px]'>
+          <div className='flex flex-col items-center justify-center space-y-6 my-2 sm:w-full md:w-[700px]'>
             <Typography as="h2" variant="h2" className='text-2xl font-bold mb-4'>클래스 시간 선택</Typography>
             <span className='w-full class-title '>희망 1순위 선택</span>
             <WeekCalendar selectedId={selectedId} setSelectedId={setSelectedId}/>
             <span className='w-full class-title'>희망 2순위 선택</span>
             <WeekCalendar selectedId={selectedId2} setSelectedId={setSelectedId2}/>
-            <div className='flex flex-col   space-y-1 my-8 w-[700px] h-[200px]'>
+            <div className='flex flex-col   space-y-1 my-8 sm:w-full md:w-[700px] h-[200px]'>
               <span>질문 있으시면 @im_wonjun DM 으로 문의 해주세요 :)</span>
               <span>If you have any questions you can DM @im_wonjun :)</span>
               <input
