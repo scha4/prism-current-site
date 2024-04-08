@@ -14,7 +14,7 @@ function SignUpFormPersonal() {
  // 입력 값을 하나의 상태 객체에서 관리합니다.
  const [formData, setFormData] = useState({
   name: '',
-  age: '나이(연도)',
+  age: '',
   gender: '',
   tel: ''
 });
@@ -121,6 +121,12 @@ const StepProgressBar = ({ currentStep }) => {
     { id: 'package3', name:'패키지 III',description: '클래스 12개 / 주 1회 (55,000원/class, 총 660,000원)',times: '12개', priceper:'1회 / 55,000원', total: '660,000원',originPrice:'120만원', discountPrice:'66만원'   },
   ];
 
+  const packages2 = [
+    { id: 'package1', name:'Pakage I', description: '4 sessions / Once a week (₩65,000 /session, total ₩260,000 )', times: '4 sessions', priceper: '₩65,000 / sess', total: '₩260,000 ', originPrice: '₩400,000 ', discountPrice: '₩260,000 ' },
+    { id: 'package2', name:'Pakage II', description: '8 sessions / Once a week (₩60,000 /session, total ₩480,000 )', times: '8 sessions', priceper: '₩60,000 / sess', total: '₩480,000 ', originPrice: '₩800,000 ', discountPrice: '₩480,000 ' },
+    { id: 'package3', name:'Pakage III', description: '12 sessions / Once a week (₩55,000 /session, total ₩660,000 )', times: '12 sessions', priceper: '₩55,000 / sess', total: '₩660,000 ', originPrice: '1,₩200,000 ', discountPrice: '₩660,000 ' },
+];
+
   const handleSelectPackage = (id) => {
     setSelectedPackage(id);
   };
@@ -186,8 +192,14 @@ useEffect(() => {
         <div className='flex justify-between ml-2 mr-2'>
             <span className='italic'>sign-up / personal training</span>
             <div className="form-check form-switch flex">
-              <input type="checkbox" className="form-check-input checkbox" id="checkbox_1" onChange={()=>{setLang(lang=='kor'?'eng':'kor')}}/>
-              <label className="form-check-label ml-1" for="checkbox_1">{lang}</label>
+              <div class="switch">
+                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" onChange={(e)=>{
+                    e.target.checked ? setLang('eng') : setLang('kor') 
+                }} checked={lang==='eng'}/>
+                <label for="language-toggle"></label>
+                <span class="on">KR</span>
+                <span class="off">EN</span>
+              </div>
             </div>
         </div>
          
@@ -231,7 +243,7 @@ useEffect(() => {
         </React.Fragment>
         :
         <React.Fragment>
-  <Typography as="h2" variant="h2" className='text-center mb-5 mt-5 pretendard'>Please Read Before Applying!</Typography>
+  <Typography as="h2" variant="h2" className='text-center mb-5 mt-5 pretendard  text-2xl '>Please Read Before Applying!</Typography>
   <div className='readme-text pretendard'>
     <div>
       <span>Thank you for your interest in our group skill training classes! Below, we provide information about our program. All sessions will last 90 minutes and cover basic basketball fundamentals to advanced skills applicable in real games. Our program is offered in packages where you can receive discounts if you select more classes (please see details below for exact pricing).</span>
@@ -260,18 +272,28 @@ useEffect(() => {
 </React.Fragment>
         }
       </div>
-
+        
       <div className='flex justify-center mt-10'>
         <StepProgressBar currentStep={currentStep} />
+      </div>
+      <div className="form-check form-switch flex justify-end w-full sm:w-[700px]  text-md ">
+        <div class="switch">
+          <input id="language-toggle2" class="check-toggle check-toggle-round-flat" type="checkbox" onChange={(e)=>{
+              e.target.checked ? setLang('eng') : setLang('kor') 
+          }} checked={lang==='eng'}/>
+          <label for="language-toggle2"></label>
+          <span class="on">KR</span>
+          <span class="off">EN</span>
+        </div>
       </div>
       <div className='flex  step-container flex-col' style={{ height: containerHeight, overflow: 'visible', transition: 'height 0.5s ease' }}>
       <div className={`step-content show`}>
               <div className='flex flex-col items-center  space-y-6 my-8 w-full  sm:w-[700px] md: h-[300px]'>
-              <Typography as="h2" variant="h2" className='text-2xl font-bold mb-4'>신청 정보</Typography>
+              <Typography as="h2" variant="h2" className='text-2xl font-bold mb-4'>{lang === 'eng' ? 'Apply Info' : '신청정보'}</Typography>
               <form className='signup-form flex flex-col items-center space-y-4 w-full'>
                 <input
-                  className=' input input-bordered w-full h-12 px-4'
-                  placeholder="이름"
+                  className='input input-bordered w-full h-12 px-4'
+                  placeholder={lang === 'eng' ? 'name' : '이름'}
                   name="name"
                   type="text"
                   value={formData.name}
@@ -280,10 +302,10 @@ useEffect(() => {
                  <Select
                     options={yearOptions}
                     className="year-select w-full"
-                    placeholder="나이(연도) 선택"
+                    placeholder={lang === 'eng' ? 'Age (Year) Selection' : '나이(연도) 선택'}
                     isSearchable={true} // 검색 가능하게 설정
                     name="age"
-                    value={{label:formData.age,value:formData.age}}
+                    value={formData.age&&formData.age != '' && {label:formData.age,value:formData.age}}
                     onChange={(e)=>{handleChange({name:'age',value:e.value})}}
                     styles={
                       {
@@ -302,7 +324,7 @@ useEffect(() => {
                       onChange={handleChange}
                       className='radio radio-primary'
                     />
-                    <span>남성</span>
+                    <span>{lang === 'eng' ? 'Male' : '남성'}</span>
                   </label>
                   <label className='flex items-center space-x-2'>
                     <input
@@ -313,12 +335,12 @@ useEffect(() => {
                       onChange={handleChange}
                       className='radio radio-primary'
                     />
-                    <span>여성</span>
+                    <span>{lang === 'eng' ? 'Female' : '여성'}</span>
                   </label>
                 </div>
                 <input
                   className='input input-bordered w-full h-12 px-4'
-                  placeholder="전화번호(숫자만 입력해주세요)"
+                  placeholder={lang === 'eng' ? 'Phone(Numbers Only)' : '전화번호(숫자만 입력해주세요)'}
                   name="tel"
                   type="tel"
                   pattern="[0-9]*"
@@ -329,10 +351,10 @@ useEffect(() => {
             </div>
         </div>
         <div className={`step-content ${currentStep === 2 ||currentStep === 3 ? 'show' : ''}`}>
-          <div className='flex flex-col items-center justify-center items-center space-y-6 my-8 sm:w-full md:w-[600px]'>
-            <Typography as="h2" variant="h2" className='text-2xl font-bold mb-4'>패키지 선택</Typography>
-              <div className='flex overflow-x-auto w-[95vw] sm:w-full' ref={scrollRef} >
-                {packages.map((pkg) => (
+          <div className='flex flex-col items-center justify-center items-center space-y-6 my-8 w-full sm:w-full md:w-[700px]'>
+            <Typography as="h2" variant="h2" className='text-2xl font-bold mb-4'>{lang === 'eng' ? 'Package Selection' : '패키지 선택'}</Typography>
+              <div className='flex overflow-x-auto w-[95vw] sm:w-full sm:overflow-hidden' ref={scrollRef} >
+                {packages.map((pkg, idx) => (
                   <div className={`${selectedPackage === pkg.id ? 'active' : ''} ${selectedPackage !== null && selectedPackage !== pkg.id ? 'inactive' : ''} pakage-item flex-col flex items-center`}>
                   <div
                     style={{position:'relative'}}
@@ -342,28 +364,28 @@ useEffect(() => {
                   >
                    {pkg.id === 'package3' && 
                    <div className='recommend-icon-div'>
-                    <span className='recommend-icon'>추천</span>
+                    <span className='recommend-icon'>{lang === 'eng' ? 'Recommend' : '추천'}</span>
                    </div>
                     }
                    <div className={`pakage-title-div ${pkg.id !== 'package3' ? 'mt-6':''}`}>
-                    <span className={`font-bold pakage-title`}>{pkg.name}</span>
+                    <span className={`font-bold pakage-title`}>{lang === 'eng' ? packages2[idx].name : pkg.name}</span>
                     </div>
                     <div className={`price-div`}>
-                      <span className='price-item origin-price'>{pkg.originPrice}</span>
-                      <span className='price-item discount-price'>{pkg.discountPrice}</span>
+                      <span className='price-item origin-price'>{lang === 'eng' ? packages2[idx].originPrice : pkg.originPrice}</span>
+                      <span className='price-item discount-price'>{lang === 'eng' ? packages2[idx].discountPrice : pkg.discountPrice}</span>
                     </div>
                     <div className={`pakage-info-div`}>
                       <div className='pakage-info-item'>
-                        <span className='info-title'>클래스</span>
-                        <span className='info-value'>{pkg.times}</span>
+                        <span className='info-title'>{lang === 'eng' ? '' : '클래스'}</span>
+                        <span className='info-value'>{lang === 'eng' ? packages2[idx].times : pkg.times}</span>
                       </div>
                       <div className='pakage-info-item'>
-                        <span className='info-title'>주</span>
-                        <span className='info-value'>{pkg.priceper}</span>
+                        <span className='info-title'>{lang === 'eng' ? '' : '주'}</span>
+                        <span className='info-value'>{lang === 'eng' ? packages2[idx].priceper : pkg.priceper}</span>
                       </div>
                       <div className='pakage-info-item'>
-                        <span className='info-title'>총</span>
-                        <span className='info-value'>{pkg.total}</span>
+                        <span className='info-title'>{lang === 'eng' ? 'Total' : '총'}</span>
+                        <span className='info-value'>{lang === 'eng' ? packages2[idx].total : pkg.total}</span>
                       </div>
                     </div>
                   </div>
@@ -374,12 +396,12 @@ useEffect(() => {
         </div>
         <div className={`step-content ${currentStep === 3 ? 'show' : ''}`}>
           <div className='flex flex-col items-center justify-center space-y-6 my-2 sm:w-full md:w-[700px]'>
-            <Typography as="h2" variant="h2" className='text-2xl font-bold mb-4'>클래스 시간 선택</Typography>
-            <span className='w-full class-title '>희망 1순위 선택</span>
+            <Typography as="h2" variant="h2" className='text-2xl font-bold mb-4'>{lang === 'eng' ? 'Select Class Time' : '클래스 시간 선택'}</Typography>
+            <span className='w-full class-title '>{lang === 'eng' ? 'Preferred 1st Choice' : '희망 1순위 선택'}</span>
             <WeekCalendar selectedId={selectedId} setSelectedId={setSelectedId}/>
-            <span className='w-full class-title'>희망 2순위 선택</span>
+            <span className='w-full class-title'>{lang === 'eng' ? 'Preferred 2nd Choice' : '희망 2순위 선택'}</span>
             <WeekCalendar selectedId={selectedId2} setSelectedId={setSelectedId2}/>
-            <div className='flex flex-col   space-y-1 my-8 sm:w-full md:w-[700px] h-[200px]'>
+            <div className='flex flex-col signup-form   space-y-1 my-8 sm:w-full md:w-[700px] h-[200px]'>
               <span>질문 있으시면 @im_wonjun DM 으로 문의 해주세요 :)</span>
               <span>If you have any questions you can DM @im_wonjun :)</span>
               <input
