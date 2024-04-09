@@ -122,9 +122,9 @@ const StepProgressBar = ({ currentStep }) => {
   ];
 
   const packages2 = [
-    { id: 'package1', name:'Pakage I', description: '4 sessions / Once a week (₩65,000 /session, total ₩260,000 )', times: '4 sessions', priceper: '₩65,000 / sess', total: '₩260,000 ', originPrice: '₩400,000 ', discountPrice: '₩260,000 ' },
-    { id: 'package2', name:'Pakage II', description: '8 sessions / Once a week (₩60,000 /session, total ₩480,000 )', times: '8 sessions', priceper: '₩60,000 / sess', total: '₩480,000 ', originPrice: '₩800,000 ', discountPrice: '₩480,000 ' },
-    { id: 'package3', name:'Pakage III', description: '12 sessions / Once a week (₩55,000 /session, total ₩660,000 )', times: '12 sessions', priceper: '₩55,000 / sess', total: '₩660,000 ', originPrice: '1,₩200,000 ', discountPrice: '₩660,000 ' },
+    { id: 'package1', name:'Pakage I', description: '4 sessions / Once a week (₩65,000 /session, total ₩260,000 )', times: '4 sessions', priceper: '₩65,000 / sess', total: '₩260K ', originPrice: '₩400K ', discountPrice: '₩260K ' },
+    { id: 'package2', name:'Pakage II', description: '8 sessions / Once a week (₩60,000 /session, total ₩480,000 )', times: '8 sessions', priceper: '₩60,000 / sess', total: '₩480K ', originPrice: '₩800K ', discountPrice: '₩480K ' },
+    { id: 'package3', name:'Pakage III', description: '12 sessions / Once a week (₩55,000 /session, total ₩660,000 )', times: '12 sessions', priceper: '₩55,000 / sess', total: '₩660K ', originPrice: '₩1,200K ', discountPrice: '₩660K ' },
 ];
 
   const handleSelectPackage = (id) => {
@@ -196,7 +196,7 @@ useEffect(() => {
                 <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" onChange={(e)=>{
                     e.target.checked ? setLang('eng') : setLang('kor') 
                 }} checked={lang==='eng'}/>
-                <label for="language-toggle"></label>
+                <label htmlFor="language-toggle"></label>
                 <span class="on">KR</span>
                 <span class="off">EN</span>
               </div>
@@ -209,10 +209,10 @@ useEffect(() => {
           <Typography as="h2" variant="h2" className='text-center mb-5 mt-5 pretendard text-2xl '>신청하시기 전에 꼭 읽어주세요!</Typography>
         <div className='readme-text pretendard'>
           <div>
-            <span>저희 그룹 스킬 트레이닝 클래스에 관심 주셔서 감사합니다!
+            <span className='ml-2'>저희 그룹 스킬 트레이닝 클래스에 관심 주셔서 감사합니다!
             아래 내용을 통해 저희 프로그램에 대해 안내드립니다.
             모든 세션은 90분으로 농구의 기본 기초부터 실제 경기에 적용할 수 있는 고급 스킬까지 다룰 예정입니다.
-            저희 프로그램은 더 많은 수업을 선택하시면 할인 받을 수 있는 패키지로 제공됩니다 (정확한 가격은 아래 내용 참고 바랍니다).
+            저희 프로그램은 더 많은 수업을 선택하시면 할인 받을 수 있는 패키지로 제공됩니다. (정확한 가격은 아래 내용 참고 바랍니다)
             </span>
           </div>
           <div className='summary mt-8'>
@@ -225,17 +225,17 @@ useEffect(() => {
           </div>
           <div className='cancel-info-div'>
             <p>※ 취소안내</p>
-            <span>
+            <span className='ml-2'>
             수업 날짜에 참여가 어려우실 경우 <span className='red'>수업 시간 24시간 이전</span>에 알려주시면 신청하신 
-            <span className='red'>4회 수업 기준으로 1회는 수업 횟수에서 차감 없이 취소가 가능</span>합니다 
-            (12세션 = 3번 휴강 가능).
+            <span className='red'>4회 수업 기준으로 1회는 수업 횟수에서 차감 없이 취소가 가능</span>합니다. 
+            (12세션 = 3번 휴강 가능)
           또는 같은 주에 진행되는 다른 수업 참여로 보강 수업이 가능합니다. 
           다만 정원이 찼을 경우 보강 수업이 어려운 점 양해 부탁드립니다.
             </span>
           </div>
           <div className='contact-info-div'>
             <p>※ 일대일 트레이닝 안내</p>
-            <span>
+            <span className='ml-2'>
               인스타 DM <span className='blue'>@im_wonjun</span> 혹은 010-4608-7511 메세지 주시길 바랍니다.
             </span>
           </div>
@@ -353,24 +353,24 @@ useEffect(() => {
         <div className={`step-content ${currentStep === 2 ||currentStep === 3 ? 'show' : ''}`}>
           <div className='flex flex-col items-center justify-center items-center space-y-6 my-8 w-full sm:w-full md:w-[700px]'>
             <Typography as="h2" variant="h2" className='text-2xl font-bold mb-4'>{lang === 'eng' ? 'Package Selection' : '패키지 선택'}</Typography>
-              <div className='flex overflow-x-auto w-[95vw] sm:w-full sm:overflow-hidden' ref={scrollRef} >
+              <div className='flex  w-[85vw] sm:w-full  flex-col sm:flex-row' ref={scrollRef} >
                 {packages.map((pkg, idx) => (
-                  <div className={`${selectedPackage === pkg.id ? 'active' : ''} ${selectedPackage !== null && selectedPackage !== pkg.id ? 'inactive' : ''} pakage-item flex-col flex items-center`}>
+                  <div className={`${selectedPackage === pkg.id ? 'active' : ''} ${selectedPackage !== null && selectedPackage !== pkg.id ? 'inactive' : ''} pakage-item flex-col flex items-center w-full sm:w-[233px] h-[160px] sm:h-[387px]`}>
                   <div
                     style={{position:'relative'}}
                     key={pkg.id}
-                    className={`w-full `}
+                    className={`w-full pakage-item-wrapper`}
                     onClick={() => handleSelectPackage(pkg.id)}
                   >
                    {pkg.id === 'package3' && 
                    <div className='recommend-icon-div'>
-                    <span className='recommend-icon'>{lang === 'eng' ? 'Recommend' : '추천'}</span>
+                    <span className='recommend-icon'>{lang === 'eng' ? 'Rec!' : '추천!'}</span>
                    </div>
                     }
-                   <div className={`pakage-title-div ${pkg.id !== 'package3' ? 'mt-6':''}`}>
+                   <div className={`pakage-title-div ${pkg.id !== 'package3' ? 'sm:mt-4':'sm:mt-4'}`}>
                     <span className={`font-bold pakage-title`}>{lang === 'eng' ? packages2[idx].name : pkg.name}</span>
                     </div>
-                    <div className={`price-div`}>
+                    <div className={`price-div mt-1`}>
                       <span className='price-item origin-price'>{lang === 'eng' ? packages2[idx].originPrice : pkg.originPrice}</span>
                       <span className='price-item discount-price'>{lang === 'eng' ? packages2[idx].discountPrice : pkg.discountPrice}</span>
                     </div>

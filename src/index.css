@@ -229,30 +229,108 @@ a.wow.current{
 
 .pakage-item{
   cursor: pointer;
-  width: 233px;
+  /* width: 233px; */
   min-width:200px;
-  height:387px;
+  /* height:387px; */
   border: 2px solid #222222;
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.pakage-item:first-child{
+  border-bottom: none;
+}
+.pakage-item.active:first-child{
+  border-bottom: none;
+  border: 2px solid #222222;
 }
 .pakage-item.inactive{
   opacity: 0.2;
 }
-.pakage-title-div{
-  height:80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.pakage-item-wrapper{
+  position: relative;
 }
+.pakage-title-div{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  position:absolute;
+  top:-2px;
+  left:-7px;
+  background-color: #000000;
+  padding:1px 7px;
+  color:#e2a721;
+}
+
 .pakage-title{
-  font-size: 24px;
+  font-size: 18px;
 }
 .price-div{
   display: flex;
-  flex-direction: column;
-  padding-left: 24px;
-  padding-bottom: 32px;
-  
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1px 30px;
+}
+@media screen and (min-width:500px) {
+  .pakage-item:first-child{
+    border-bottom: 2px solid #222222;
+  }
+  .pakage-item-wrapper{
+    position: unset;
+ 
+  }
+  .pakage-title-div{
+    position:unset;
+     height:80px;
+     background-color:unset;
+     padding:1px 7px;
+     color:inherit;
+  }
+  .price-div{
+    flex-direction: column;
+    padding-left: 24px;
+    padding-bottom: 32px;
+    justify-content: unset;
+    align-items: flex-start;
+  }
+  .pakage-title-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pakage-info-item{
+    margin-bottom: 25px;
+  }
+  .pakage-info-div{
+    font-size: 18px;
+    padding: 0px 30px;
+    width: 100%;
+  }
+  .pakage-title{
+    font-size: 24px;
+  }
+  .recommend-icon-div{
+    position: unset;
+    top:-5px !important;
+    left:0 !important;
+    min-width: 200px;
+  }
+  .recommend-icon{
+    background-color: #FF4242;
+    color:white !important;
+    font-weight: bold;
+    font-size: 16px  !important;
+    padding: 5px 8px;
+  }
+  .pakage-info-div{
+    font-size: 18px  !important;
+    padding: 0px 30px;
+    width: 100%;
+  }
+  .pakage-info-item{
+    margin-bottom: 20px !important;
+    display: flex;
+    justify-content:space-between;
+  }
 }
 .origin-price{
   color:#999999;
@@ -262,14 +340,15 @@ a.wow.current{
 .discount-price{
   font-size: 32px;
   font-weight: bold;
+  margin-left: 5px;
 }
 .pakage-info-div{
-  font-size: 18px;
-  padding-left: 24px;
-  width: 87%;
+  font-size: 16px;
+  padding: 0px 30px;
+  width: 100%;
 }
 .pakage-info-item{
-  margin-bottom: 24px;
+  margin-bottom: 5px;
   display: flex;
   justify-content:space-between;
 }
@@ -295,16 +374,17 @@ a.wow.current{
   padding-top: 5px;
 }
 .recommend-icon-div{
-  
+  position: absolute;
+  top:-5px;
+  left:285px;
+  min-width: 200px;
 }
 .recommend-icon{
-  width:50px;
-  height: 27px;
   background-color: #FF4242;
   color:white !important;
   font-weight: bold;
-  font-size: 16px;
-  padding: 10px 8px;
+  font-size: 14px;
+  padding: 5px 8px;
 }
 .check-icon{
   position: absolute;
