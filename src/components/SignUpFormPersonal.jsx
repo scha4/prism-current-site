@@ -218,7 +218,8 @@ useEffect(() => {
           <div className='summary mt-8'>
             <p>ㆍ 4주로 구성된 주 1회 코스</p>
             <p>ㆍ 한 그룹에 3~6명 참여</p>
-            <p>ㆍ 메인트레이너: 임원준 코치 <span className='desc'>(프로그램 중 2회는 이승준 코치와 임원준 코치가 함께 지도 예정)</span></p>
+            {/* <p>ㆍ 메인트레이너: 임원준 코치 <span className='desc'>(프로그램 중 2회는 이승준 코치와 임원준 코치가 함께 지도 예정)</span></p> */}
+            <p>ㆍ 메인트레이너: 임원준 코치</p>
             <p>ㆍ 진행 체육관: Higher Basketball 체육관</p>
             <p className='ml-6'>    - 3개의 후프가 있는 하프 코트 체육관</p>
             <p className='ml-6'>    - 주소: 서대문구 연희동 81-14</p>
@@ -236,7 +237,7 @@ useEffect(() => {
           <div className='contact-info-div'>
             <p>※ 일대일 트레이닝 안내</p>
             <span className='ml-2'>
-              인스타 DM <span className='blue'>@im_wonjun</span> 혹은 010-4608-7511 메세지 주시길 바랍니다.
+              인스타 DM <span className='blue'>@im_wonjun</span>  메세지 주시길 바랍니다.
             </span>
           </div>
         </div>
